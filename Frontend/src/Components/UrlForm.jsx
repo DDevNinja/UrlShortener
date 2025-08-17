@@ -33,7 +33,7 @@ function UrlForm() {
     };
 
     const handleCopy = () => {
-        const fullUrl = `http://localhost:3000/${shortUrl}`;
+        const fullUrl = `https://urlshortener-xifk.onrender.com/${shortUrl}`;
         navigator.clipboard.writeText(fullUrl);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
