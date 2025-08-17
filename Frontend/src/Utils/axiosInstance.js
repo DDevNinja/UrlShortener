@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosinstance = axios.create({
-    baseURL: 'http://localhost:3000',
+    baseURL: 'https://urlshortener-xifk.onrender.com',
     withCredentials: true,
     timeout: 10000,
     headers: {
