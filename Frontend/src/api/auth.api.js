@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:3000/api/auth';
+const API_BASE_URL = 'https://urlshortener-xifk.onrender.com/api/auth';
 
 // Configure axios to include cookies
 axios.defaults.withCredentials = true;
