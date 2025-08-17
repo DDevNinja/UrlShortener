@@ -38,7 +38,7 @@ function Profile() {
     };
 
     const copyToClipboard = (text) => {
-        navigator.clipboard.writeText(`http://localhost:3000/${text}`);
+        navigator.clipboard.writeText(`https://urlshortener-xifk.onrender.com/${text}`);
     };
 
     if (loading) return <div className="flex justify-center p-8">Loading...</div>;
