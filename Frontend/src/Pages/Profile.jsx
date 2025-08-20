@@ -10,7 +10,35 @@ function Profile() {
 
     useEffect(() => {
         fetchUserUrls();
-    }, []);
+    }, []);useEffect(() => {
+  const fetchUrls = async () => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      console.warn("No token found. Redirecting to login...");
+      navigate("/login");
+      return;
+    }
+
+    try {
+      const response = await fetch("https://urlshortener-xifk.onrender.com/api/user/urls", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      const data = await response.json();
+      setUrls(data.urls);
+    } catch (error) {
+      console.error("Failed to fetch URLs", error);
+    }
+  };
+
+  fetchUrls();
+}, []);
+
 
     const fetchUserUrls = async () => {
         try {
